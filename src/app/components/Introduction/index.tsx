@@ -1,5 +1,4 @@
 import styles from "@/app/page.module.css";
-import Navigation from "@/app/components/Navigation/Navigation";
 import {strings} from "@/app/page.strings";
 
 
