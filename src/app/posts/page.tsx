@@ -2,20 +2,13 @@
 
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
-import Navigation from "@/app/components/Navigation";
+import Navigation from "@/app/components/Navigation/Navigation";
 import { posts } from "@/app/data/posts";
 import { useRouter } from "next/navigation";
+import {formatDate} from "@/app/util/date";
 
 export default function Posts() {
     const router = useRouter();
-
-    const formatDate = (dateString: string) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
 
     return (
         <div className={styles.page}>
@@ -33,7 +26,7 @@ export default function Posts() {
                                     </div>
                                 </div>
                                 <p className={styles.postExcerpt}>{post.excerpt}</p>
-                                <button 
+                                <button
                                     className={styles.readMoreButton}
                                     onClick={() => router.push(`/posts/${post.id}`)}
                                 >
@@ -44,8 +37,8 @@ export default function Posts() {
                     </div>
                 </div>
             </main>
-            <footer className={styles.footer} style={{paddingTop: 12}}>
-                <div>My {strings.blog}</div>
+            <footer className={styles.footer}>
+                <div>{strings.footerText}</div>
             </footer>
         </div>
     );

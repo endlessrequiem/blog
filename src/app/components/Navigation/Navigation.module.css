@@ -6,6 +6,7 @@
     top: 0;
     z-index: 100;
     font-family: var(--font-geist-mono);
+    width: 100%;
 }
 
 .navContainer {
@@ -29,6 +30,9 @@
 
 .navLinks {
     display: flex;
+    flex: 1;
+    justify-content: start;
+    align-content: start;
     gap: 16px;
 }
 
@@ -75,13 +79,13 @@
     .navContainer {
         padding: 0 32px;
     }
-    
+
     .navLink {
         font-size: 14px;
         height: 40px;
         padding: 0 16px;
     }
-    
+
     .logo {
         font-size: 16px;
     }

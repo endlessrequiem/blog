@@ -55,6 +55,11 @@
     list-style-position: inside;
 }
 
+.footer {
+    opacity: 35%;
+    padding-top: 12px;
+}
+
 .main h1 {
     font-weight: 600;
     font-size: 36px;
@@ -280,15 +285,15 @@ a.secondary {
     .postsTitle {
         font-size: 2rem;
     }
-    
+
     .postCard {
         padding: 1rem;
     }
-    
+
     .postTitle {
         font-size: 1.25rem;
     }
-    
+
     .postMeta {
         flex-direction: column;
         gap: 0.25rem;
@@ -345,7 +350,7 @@ a.secondary {
         font-size: 1rem;
         line-height: 1.6;
     }
-    
+
     .postContainer {
         padding: 0 1rem;
     }
