@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
+import {strings} from "@/app/page.strings";
 
 export default function Navigation() {
     const router = useRouter();
@@ -11,20 +12,20 @@ export default function Navigation() {
         <nav className={styles.navigation}>
             <div className={styles.navContainer}>
                 <div className={styles.logo}>
-                    Austin's Blog
+                    {strings.navTitle}
                 </div>
                 <div className={styles.navLinks}>
-                    <button 
+                    <button
                         className={`${styles.navLink} ${pathname === '/' ? styles.active : ''}`}
                         onClick={() => router.push('/')}
                     >
-                        Home
+                        {strings.navHome}
                     </button>
-                    <button 
+                    <button
                         className={`${styles.navLink} ${pathname === '/posts' ? styles.active : ''}`}
                         onClick={() => router.push('/posts')}
                     >
-                        Blog Posts
+                        {strings.navBlogPosts}
                     </button>
                 </div>
             </div>

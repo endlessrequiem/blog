@@ -3,8 +3,9 @@
 import { notFound } from 'next/navigation';
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
-import Navigation from "@/app/components/Navigation";
+import Navigation from "@/app/components/Navigation/Navigation";
 import { posts } from "@/app/data/posts";
+import {formatDate} from "@/app/util/date";
 
 interface PostPageProps {
     params: {
@@ -18,14 +19,6 @@ export default function PostPage({ params }: PostPageProps) {
     if (!post) {
         notFound();
     }
-
-    const formatDate = (dateString: string) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
 
     return (
         <div className={styles.page}>
@@ -47,7 +40,7 @@ export default function PostPage({ params }: PostPageProps) {
                         ))}
                     </div>
                     <div className={styles.postFooter}>
-                        <button 
+                        <button
                             className={styles.backButton}
                             onClick={() => window.history.back()}
                         >
@@ -56,8 +49,8 @@ export default function PostPage({ params }: PostPageProps) {
                     </div>
                 </article>
             </main>
-            <footer className={styles.footer} style={{paddingTop: 12}}>
-                <div>My {strings.blog}</div>
+            <footer className={styles.footer}>
+                <div>{strings.footerText}</div>
             </footer>
         </div>
     );
