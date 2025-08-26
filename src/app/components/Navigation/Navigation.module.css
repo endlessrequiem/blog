@@ -1,20 +1,20 @@
 .navigation {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px 12px 12px 12px;
     padding: 12px 0;
     position: sticky;
-    top: 0;
+    top: 12px;
     z-index: 100;
     font-family: var(--font-geist-mono);
     width: 80%;
-    margin: 0 12px;
+    margin: 12px;
     width: calc(100% - 48px);
 }
 
 .navContainer {
     width: 100%;
-    padding: 0 80px;
+    padding: 6px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;

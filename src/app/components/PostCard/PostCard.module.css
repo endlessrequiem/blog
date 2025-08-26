@@ -1,0 +1,89 @@
+.postCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.postCard:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.postHeader {
+    margin-bottom: 1rem;
+}
+
+.postTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.postMeta {
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.postDate {
+    font-weight: 500;
+}
+
+.postAuthor {
+    font-style: italic;
+}
+
+.postExcerpt {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.readMoreButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: var(--font-geist-mono);
+    display: block;
+    margin: 0 auto;
+}
+
+.readMoreButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .postCard {
+        padding: 1rem;
+    }
+
+    .postTitle {
+        font-size: 1.25rem;
+    }
+
+    .postMeta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
