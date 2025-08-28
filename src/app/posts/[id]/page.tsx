@@ -27,12 +27,9 @@ export default function PostPage({ params }: PostPageProps) {
             <Navigation />
             <main className={styles.main}>
                 <article className={styles.postContainer}>
-                    <header className={styles.postHeader}>
+                    <header>
                         <h1 className={styles.postTitle}>{post.title}</h1>
-                        <div className={styles.postMeta}>
-                            <span className={styles.postDate}>{formatDate(post.date)}</span>
-                            <span className={styles.postAuthor}>by {post.author}</span>
-                        </div>
+                        <span className={styles.postDate}>{formatDate(post.date)}</span>
                     </header>
                     <div className={styles.postContent}>
                         {post.content.split('\n\n').map((paragraph, index) => (

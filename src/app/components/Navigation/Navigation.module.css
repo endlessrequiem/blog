@@ -25,10 +25,10 @@
     font-weight: 600;
     color: #ffffff;
     cursor: pointer;
-    font-family: var(--font-geist-mono);
     line-height: 24px;
     letter-spacing: -0.01em;
     margin-right: 24px;
+    font-family: var(--font-geist-sans);
 }
 
 .navLinks {
@@ -41,7 +41,8 @@
 
 .navLink {
     appearance: none;
-    border-radius: 128px;
+    border-radius: 12px;
+    font-family: var(--font-geist-sans);
     height: 48px;
     padding: 0 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -55,7 +56,6 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
-    font-family: var(--font-geist-mono);
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
