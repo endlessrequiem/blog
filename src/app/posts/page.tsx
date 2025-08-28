@@ -2,7 +2,7 @@
 
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
-import Navigation from "@/app/components/Navigation/Navigation";
+import Navigation from "@/app/components/Navigation";
 import PostCard from "@/app/components/PostCard";
 import { posts } from "@/app/data/posts";
 

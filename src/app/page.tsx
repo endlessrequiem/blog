@@ -2,7 +2,7 @@
 
 import styles from "./page.module.css";
 import {strings} from "./page.strings";
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/Navigation";
 import Introduction from "@/app/components/Introduction";
 
 export default function Home() {

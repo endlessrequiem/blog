@@ -4,9 +4,9 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
-import Navigation from "@/app/components/Navigation/Navigation";
+import Navigation from "@/app/components/Navigation";
 import { posts } from "@/app/data/posts";
-import {formatDate} from "@/app/util/date";
+import {formatDate} from "@/app/const/date";
 
 interface PostPageProps {
     params: Promise<{
