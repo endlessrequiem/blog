@@ -1,17 +1,20 @@
 .navigation {
-    background: var(--background);
-    border-bottom: 1px solid var(--gray-alpha-200);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px 12px 12px 12px;
     padding: 12px 0;
     position: sticky;
-    top: 0;
+    top: 12px;
     z-index: 100;
     font-family: var(--font-geist-mono);
-    width: 100%;
+    width: 80%;
+    margin: 12px;
+    width: calc(100% - 48px);
 }
 
 .navContainer {
     width: 100%;
-    padding: 0 80px;
+    padding: 6px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +23,7 @@
 .logo {
     font-size: 18px;
     font-weight: 600;
-    color: var(--foreground);
+    color: #ffffff;
     cursor: pointer;
     font-family: var(--font-geist-mono);
     line-height: 24px;
@@ -41,8 +44,7 @@
     border-radius: 128px;
     height: 48px;
     padding: 0 20px;
-    border: none;
-    border: 1px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: background 0.2s,
     color 0.2s,
     border-color 0.2s;
@@ -54,25 +56,24 @@
     line-height: 20px;
     font-weight: 500;
     font-family: var(--font-geist-mono);
-    background: var(--background);
-    color: var(--foreground);
-    border-color: var(--gray-alpha-200);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
 .navLink:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .navLink.active {
-    background: var(--foreground);
-    color: var(--background);
-    border-color: transparent;
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 .navLink.active:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 600px) {

@@ -3,13 +3,10 @@
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
 import Navigation from "@/app/components/Navigation/Navigation";
+import PostCard from "@/app/components/PostCard";
 import { posts } from "@/app/data/posts";
-import { useRouter } from "next/navigation";
-import {formatDate} from "@/app/util/date";
 
 export default function Posts() {
-    const router = useRouter();
-
     return (
         <div className={styles.page}>
             <Navigation />
@@ -17,22 +14,7 @@ export default function Posts() {
                 <div className={styles.postsContainer}>
                     <div className={styles.postsList}>
                         {posts.map((post) => (
-                            <article key={post.id} className={styles.postCard}>
-                                <div className={styles.postHeader}>
-                                    <h2 className={styles.postTitle}>{post.title}</h2>
-                                    <div className={styles.postMeta}>
-                                        <span className={styles.postDate}>{formatDate(post.date)}</span>
-                                        <span className={styles.postAuthor}>by {post.author}</span>
-                                    </div>
-                                </div>
-                                <p className={styles.postExcerpt}>{post.excerpt}</p>
-                                <button
-                                    className={styles.readMoreButton}
-                                    onClick={() => router.push(`/posts/${post.id}`)}
-                                >
-                                    Read More
-                                </button>
-                            </article>
+                            <PostCard key={post.id} post={post} />
                         ))}
                     </div>
                 </div>

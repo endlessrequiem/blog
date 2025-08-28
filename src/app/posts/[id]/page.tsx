@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { notFound } from 'next/navigation';
 import styles from "@/app/page.module.css";
 import {strings} from "@/app/page.strings";
@@ -8,13 +9,14 @@ import { posts } from "@/app/data/posts";
 import {formatDate} from "@/app/util/date";
 
 interface PostPageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
 export default function PostPage({ params }: PostPageProps) {
-    const post = posts.find(p => p.id === params.id);
+    const { id } = React.use(params);
+    const post = posts.find(p => p.id === id);
 
     if (!post) {
         notFound();
