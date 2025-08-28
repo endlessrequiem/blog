@@ -18,7 +18,6 @@ export default function PostCard({ post }: PostCardProps) {
                 <h2 className={styles.postTitle}>{post.title}</h2>
                 <div className={styles.postMeta}>
                     <span className={styles.postDate}>{formatDate(post.date)}</span>
-                    <span className={styles.postAuthor}>by {post.author}</span>
                 </div>
             </div>
             <p className={styles.postExcerpt}>{post.excerpt}</p>
